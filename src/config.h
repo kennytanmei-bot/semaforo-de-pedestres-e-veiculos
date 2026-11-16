@@ -5,8 +5,8 @@
  * Placa 1 (integrante A): ROLE_PEDESTRIAN
  * Placa 2 (integrante B): ROLE_VEHICLE
  * Deixe SOMENTE uma das linhas abaixo ativa antes de gravar cada placa. */
-/* #define ROLE_VEHICLE */
-#define ROLE_PEDESTRIAN 
+ #define ROLE_VEHICLE
+//#define ROLE_PEDESTRIAN 
 
 #if defined(ROLE_VEHICLE) && defined(ROLE_PEDESTRIAN)
 #error "Defina apenas um papel (ROLE_VEHICLE ou ROLE_PEDESTRIAN)"
@@ -20,8 +20,8 @@
  * Com ambas comentadas, o firmware opera no modo INTEGRADO.
  * A selecao do papel (ROLE_VEHICLE/ROLE_PEDESTRIAN) continua separada.
  */
-/* #define VEH_STANDALONE_TEST */
-#define PED_STANDALONE_TEST
+#define VEH_STANDALONE_TEST
+//#define PED_STANDALONE_TEST
 
 #if defined(VEH_STANDALONE_TEST) && defined(PED_STANDALONE_TEST)
 #error "Ative apenas um modo de teste isolado por compilacao"
