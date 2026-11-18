@@ -43,4 +43,4 @@ sh test/host/run_selftest.sh                    # autoteste do validador (sem pl
 O validador confere durações, ordem do ciclo, exclusão mutua, noturno e sincronismo PED×VEH.
 
 ## Testes
-Plano completo em modelo V: [`docs/PLANO_DE_TESTES.md`](docs/PLANO_DE_TESTES.md).
+Plano completo em modelo V (unidade, integração, sistema, aceitação; pré-condição/etapas/pós-condição): [`docs/PLANO_DE_TESTES.md`](docs/PLANO_DE_TESTES.md).
