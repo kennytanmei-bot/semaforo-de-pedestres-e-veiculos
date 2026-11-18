@@ -3,6 +3,7 @@
 
 #define PORT_B DEVICE_DT_GET(DT_NODELABEL(gpiob))
 #define PORT_D DEVICE_DT_GET(DT_NODELABEL(gpiod))
+#define PORT_A DEVICE_DT_GET(DT_NODELABEL(gpioa))
 
 /* RGB onboard: PTB19 verde e PTB18 vermelho (ativos em nivel baixo). */
 const struct pin PIN_LED0 = { PORT_B, 19 };
@@ -12,8 +13,12 @@ const struct pin PIN_LED2 = { PORT_B, 18 };
 const struct pin PIN_LINK_PEDGO = { PORT_B, 3 };
 const struct pin PIN_LINK_NIGHT = { PORT_D, 4 };
 const struct pin PIN_LINK_REQ = { PORT_D, 5 };
-const struct pin PIN_LOCAL_IN = { PORT_D, 0 };
 
+#if defined(ROLE_VEHICLE)
+const struct pin PIN_LOCAL_IN = { PORT_A, 12 };
+#else
+const struct pin PIN_LOCAL_IN = { PORT_D, 0 };
+#endif
 void io_led_init(void)
 {
 	if (!device_is_ready(PORT_B)) {
@@ -30,26 +35,28 @@ void io_led_init(void)
 
 void io_led_write(const struct pin *p, int on)
 {
-	/* RGB onboard e ativo em nivel baixo: 0 acende, 1 apaga. */
-	int raw = on ? 0 : 1;
+    /* LEDs RGB ativos em nível baixo */
+    int raw = on ? 0 : 1;
 
-	if (p == &PIN_LED0) {
-		gpio_pin_set_raw(PORT_B, 19, raw); /* verde */
-		return;
-	}
+    if (p == &PIN_LED0) {
+        /* Verde */
+        gpio_pin_set_raw(PORT_B, 19, raw);
+        return;
+    }
 
 #if defined(ROLE_VEHICLE)
-	if (p == &PIN_LED1) {
-		/* Amarelo: canais vermelho e verde ligados simultaneamente. */
-		gpio_pin_set_raw(PORT_B, 18, raw);
-		gpio_pin_set_raw(PORT_B, 19, raw);
-		return;
-	}
+    if (p == &PIN_LED1) {
+        /* Amarelo = vermelho + verde */
+        gpio_pin_set_raw(PORT_B, 18, raw);
+        gpio_pin_set_raw(PORT_B, 19, raw);
+        return;
+    }
 #endif
 
-	if (p == &PIN_LED1 || p == &PIN_LED2) {
-		gpio_pin_set_raw(PORT_B, 18, raw); /* vermelho */
-	}
+    if (p == &PIN_LED1 || p == &PIN_LED2) {
+        /* Vermelho */
+        gpio_pin_set_raw(PORT_B, 18, raw);
+    }
 }
 
 void io_init_out(const struct pin *p, int level)

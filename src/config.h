@@ -5,8 +5,8 @@
  * Placa 1 (integrante A): ROLE_PEDESTRIAN
  * Placa 2 (integrante B): ROLE_VEHICLE
  * Deixe SOMENTE uma das linhas abaixo ativa antes de gravar cada placa. */
-//#define ROLE_VEHICLE
-#define ROLE_PEDESTRIAN 
+#define ROLE_VEHICLE
+//#define ROLE_PEDESTRIAN 
 
 #if defined(ROLE_VEHICLE) && defined(ROLE_PEDESTRIAN)
 #error "Defina apenas um papel (ROLE_VEHICLE ou ROLE_PEDESTRIAN)"
