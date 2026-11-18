@@ -4,11 +4,13 @@ Dupla: ____________ (placa de pedestres) / ____________ (placa de veículos) —
 
 ## 1. Modelo V aplicado
 
+![Modelo V](modelo-v.png)
+
 | Fase de desenvolvimento | Atividade neste projeto | Nível de teste |
 |---|---|---|
-| 1. Requisitos de sistema | RF1–RF5 e RNF (seção 2) | **Aceitação (TA)** |
-| 2. Arquitetura de sistema | 2 placas, 3 sinais (PED_GO, NIGHT, REQ), modos normal/noturno/travessia | **Sistema (TS)** |
-| 3. Projeto de componentes | módulos `pedestrian.c`, `vehicle.c`, `io.c`; comunicação entre semáforos | **Integração (TI)** |
+| 1. Requisitos de sistema | RF1–RF5 e RNF (seção 2) | **Aceitação / validação (TA)** |
+| 2. Arquitetura de sistema | 2 placas, 3 sinais (PED_GO, NIGHT, REQ), modos normal/noturno/travessia | **Sistema integrado (TS)** |
+| 3. Projeto de componentes | módulos `pedestrian.c`, `vehicle.c`, `io.c`; comunicação entre semáforos | **Integração de componentes (TI)** |
 | 4. Implementação | código e threads de cada LED | **Unidade (TU)** |
 
 Todo teste segue: **pré-condição → etapas → pós-condição**, escrito para que outro desenvolvedor o reproduza.
@@ -90,7 +92,7 @@ Preparação: ativar `PED_STANDALONE_TEST` ou `VEH_STANDALONE_TEST` em `config.h
 - **Pós-condição (esperado):** Log correto = PASS; log com falha injetada = FAIL (rejeitado).
 - **Obtido:** ________  **Resultado:** ☐ Passou ☐ Falhou  **Executor/Revisor:** ________
 
-## 4. Testes de Integração (Projeto de componentes → módulos + interação entre os semáforos)
+## 4. Testes de Integração de Componentes (Projeto de componentes → módulos + interação entre os semáforos)
 
 Preparação: flags de teste comentadas, duas placas ligadas (PED_GO, NIGHT, REQ, GND). Capturar `veh.log` e `ped.log`.
 ### TI-1 — Enlace PED_GO (VEH → PED)
@@ -149,7 +151,7 @@ Preparação: flags de teste comentadas, duas placas ligadas (PED_GO, NIGHT, REQ
 - **Pós-condição (esperado):** Em nenhum instante PED VERDE coincide com VEH VERDE/AMARELO.
 - **Obtido:** ________  **Resultado:** ☐ Passou ☐ Falhou  **Executor/Revisor:** ________
 
-## 5. Testes de Sistema (Arquitetura → sistema completo: modos noturno e botão)
+## 5. Testes de Sistema Integrado (Arquitetura → sistema completo: modos noturno e botão)
 
 Preparação: mesma de integração; bancada com as duas placas e cronômetro/analisador lógico como referência independente.
 ### TS-1 — Modo normal contínuo
@@ -203,7 +205,7 @@ Preparação: mesma de integração; bancada com as duas placas e cronômetro/an
 - **Pós-condição (esperado):** Reinicia em estado seguro (PED vermelho) e volta a sincronizar.
 - **Obtido:** ________  **Resultado:** ☐ Passou ☐ Falhou  **Executor/Revisor:** ________
 
-## 6. Testes de Aceitação (Requisitos → checklist final do enunciado)
+## 6. Testes de Aceitação / Validação (Requisitos → checklist final do enunciado)
 
 Preparação: sistema completo em ambiente representativo (bancada), avaliador diferente do autor (par).
 ### TA-1 — Pedestres: 2 LEDs, 4 s / 4 s, 2 threads, mutex
