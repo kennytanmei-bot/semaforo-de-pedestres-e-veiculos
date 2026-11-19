@@ -1,0 +1,31 @@
+[0] CROSS: Placa B: aguardando sincronizacao da Placa A
+[2790] CROSS: Botao da Rua B pressionado; pedido armazenado
+[3274] CROSS: Sincronizado: Rua B liberada
+[3274] CROSS: Rua B: VEICULOS VERDE
+[6282] CROSS: Rua B: VEICULOS AMARELO
+[7274] CROSS: Rua B: VEICULOS VERMELHO
+[7774] CROSS: Sincronizado: Rua A liberada
+[7774] CROSS: Travessia autorizada por 4000 ms
+[7774] CROSS: Rua B: PEDESTRES VERDE
+[9290] CROSS: Botao da Rua B pressionado; pedido armazenado
+[11778] CROSS: Tempo de travessia encerrado
+[11778] CROSS: Rua B: PEDESTRES VERMELHO
+[12281] CROSS: Sincronizado: Rua B liberada
+[12281] CROSS: Rua B: VEICULOS VERDE
+[15287] CROSS: Rua B: VEICULOS AMARELO
+[16288] CROSS: Rua B: VEICULOS VERMELHO
+[16783] CROSS: Sincronizado: Rua A liberada
+[16783] CROSS: Travessia autorizada por 4000 ms
+[16783] CROSS: Rua B: PEDESTRES VERDE
+[20789] CROSS: Tempo de travessia encerrado
+[20789] CROSS: Rua B: PEDESTRES VERMELHO
+[21294] CROSS: Sincronizado: Rua B liberada
+[21294] CROSS: Rua B: VEICULOS VERDE
+[24304] CROSS: Rua B: VEICULOS AMARELO
+[25302] CROSS: Rua B: VEICULOS VERMELHO
+[25793] CROSS: Sincronizado: Rua A liberada
+[30297] CROSS: Sincronizado: Rua B liberada
+[30297] CROSS: Rua B: VEICULOS VERDE
+[33303] CROSS: Rua B: VEICULOS AMARELO
+[34304] CROSS: Rua B: VEICULOS VERMELHO
+[34798] CROSS: Sincronizado: Rua A liberada

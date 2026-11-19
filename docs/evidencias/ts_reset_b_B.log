@@ -1,0 +1,21 @@
+[0] CROSS: Placa B: aguardando sincronizacao da Placa A
+[3274] CROSS: Sincronizado: Rua B liberada
+[3274] CROSS: Rua B: VEICULOS VERDE
+[6282] CROSS: Rua B: VEICULOS AMARELO
+[7274] CROSS: Rua B: VEICULOS VERMELHO
+[7774] CROSS: Sincronizado: Rua A liberada
+[12281] CROSS: Sincronizado: Rua B liberada
+[12281] CROSS: Rua B: VEICULOS VERDE
+=== RESET placa B ===
+[0] CROSS: Placa B: aguardando sincronizacao da Placa A
+[3615] CROSS: Sincronizado: Rua A liberada
+[8129] CROSS: Sincronizado: Rua B liberada
+[8129] CROSS: Rua B: VEICULOS VERDE
+[11133] CROSS: Rua B: VEICULOS AMARELO
+[12131] CROSS: Rua B: VEICULOS VERMELHO
+[12627] CROSS: Sincronizado: Rua A liberada
+[17128] CROSS: Sincronizado: Rua B liberada
+[17128] CROSS: Rua B: VEICULOS VERDE
+[20138] CROSS: Rua B: VEICULOS AMARELO
+[21135] CROSS: Rua B: VEICULOS VERMELHO
+[21639] CROSS: Sincronizado: Rua A liberada

@@ -1,3 +1,3 @@
-Testes do projeto (modelo V) - veja docs/PLANO_DE_TESTES.md.
-- Testes na placa: unitarios (flags *_STANDALONE_TEST), integracao e sistema, com evidencia via log serial.
-- test/host/run_selftest.sh: autoteste (no PC) do validador tools/verify_log.py.
+Testes (modelo V): docs/PLANO_DE_TESTES.md.
+- Bancada: capturar logs com tools/capture_log.py e validar com tools/verify_log.py.
+- Sem placas: sh test/host/run_sim.sh (simulate.py espelha src/intersection.c).
