@@ -1,7 +1,5 @@
 # Plano de Testes — Semáforos de Pedestres e Veículos (Modelo V)
 
-Dupla: ____________ (placa A, Rua A) / ____________ (placa B, Rua B) — Data: ____
-
 ## 1. Modelo V aplicado
 
 ![Modelo V](modelo-v.png)
@@ -327,7 +325,7 @@ Preparação: bancada completa; avaliador diferente do autor (par).
 ## 8. Avaliação por pares
 | Testes revisados | Autor do código | Revisor | Observações | Data |
 |---|---|---|---|---|
-| Sim | Kenny e Davi | Kenny e Davi | 3 falhas registradas e ainda não solucionadas | 18/11 |
+| Sim | Kenny e Davi | Kenny e Davi | 0 falhas registradas e todas os problemas anteriores solucionados | 21/11 |
 
 ## 9. Versionamento
 Marcos de commit sugeridos (cada integrante com o próprio usuário Git): (1) código original; (2) 1ª falha detectada (anexar log: ex. TI-11 ou TS-10); (3) correção; (4) validação final com os testes aprovados na bancada.
