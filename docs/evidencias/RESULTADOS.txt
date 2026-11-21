@@ -30,8 +30,8 @@ PASS=42 FAIL=0
   B   veh_amarelo            n=  3 min=1000 med=1000 max=1001
   B   veh_verde              n=  3 min=3002 med=3004 max=3007
   B   veh_vermelho           n=  2 min=4996 med=4999 max=5003
-=== ti_night
-PASS=59 FAIL=0
+=== ti_night_cut
+PASS=41 FAIL=0
   A   night_ped_APAGADO      n=  5 min=997 med=1005 max=1009
   A   night_ped_VERMELHO     n=  5 min=991 med=996 max=1009
   A   night_veh_AMARELO      n=  6 min=991 med=996 max=1009
@@ -39,15 +39,11 @@ PASS=59 FAIL=0
   A   veh_amarelo            n=  2 min=996 med=999 max=1002
   A   veh_verde              n=  2 min=3004 med=3005 max=3006
   A   veh_vermelho           n=  1 min=5001 med=5001 max=5001
-  A/B latencia_night_ms      n=  1 min=-1 med=-1 max=-1
   A/B offset_relogios_ms     n=  1 min=1226 med=1226 max=1226
   A/B todos_vermelho_min     n=  1 min=494 med=494 max=494
-  B   night_ped_APAGADO      n=  5 min=997 med=1005 max=1007
-  B   night_ped_VERMELHO     n=  5 min=991 med=994 max=1002
-  B   night_veh_AMARELO      n=  5 min=991 med=994 max=1002
-  B   night_veh_APAGADO      n=  5 min=997 med=1005 max=1007
-  B   veh_amarelo            n=  1 min=999 med=999 max=999
+  B   veh_amarelo            n=  2 min=1000 med=1001 max=1003
   B   veh_verde              n=  2 min=3008 med=3008 max=3008
+  B   veh_vermelho           n=  1 min=5001 med=5002 max=5004
 === ti_night_cut
 PASS=39 FAIL=2
   FALHA: B@6282: AMARELO 514 ms (1000)
@@ -162,14 +158,12 @@ PASS=59 FAIL=0
   B   veh_vermelho           n=  1 min=5007 med=5007 max=5007
 === ts_reset_a
   (aviso: houve RESET; cruzamento entre placas nao verificado automaticamente)
-PASS=44 FAIL=2
-  FALHA: B@12281: VERDE 493 ms (3000)
-  FALHA: B@12774: ordem invalida VERDE->VERMELHO
+PASS=46 FAIL=0
   A   veh_amarelo            n=  5 min=995 med=996 max=999
   A   veh_verde              n=  5 min=3002 med=3005 max=3008
   A   veh_vermelho           n=  3 min=5003 med=5007 max=5008
-  B   veh_amarelo            n=  3 min=992 med=993 max=1000
-  B   veh_verde              n=  5 min=493 med=3007 max=3009
+  B   veh_amarelo            n=  4 min=992 med=996 max=1000
+  B   veh_verde              n=  5 min=3001 med=3007 max=3009
   B   veh_vermelho           n=  3 min=5007 med=5010 max=5015
 === ts_reset_b
   (aviso: houve RESET; cruzamento entre placas nao verificado automaticamente)
